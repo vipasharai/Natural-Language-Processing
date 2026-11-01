@@ -1,68 +1,56 @@
-# Natural-Language-Processing
+# Natural Language Processing & Sequence Models
 
-📌 Repository Overview
-This repository serves as a structured, end-to-end sandbox and reference manual for Natural Language Processing. It bridges theory and execution by demonstrating how text data transitions from raw unstructured strings into high-dimensional vector spaces, sequential representations, and attention-driven contextual embeddings.
+[![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.x-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![NLTK](https://img.shields.io/badge/NLTK-3.x-green?style=for-the-badge)](https://www.nltk.org/)
+[![spaCy](https://img.shields.io/badge/spaCy-3.x-09A3D5?style=for-the-badge&logo=spacy&logoColor=white)](https://spacy.io/)
+[![HuggingFace](https://img.shields.io/badge/Hugging%20Face-Transformers-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-📂 Repository Contents & Module Breakdown
-The repository is logically categorized into core foundational processing, advanced statistical representations, deep learning sequence architectures, and state-of-the-art transformer mechanisms:
+<p align="center">
+  A comprehensive repository covering foundational NLP preprocessing, text representations, classical sequence architectures (RNN/LSTM/GRU), Attention Mechanisms, and modern Transformer models.
+</p>
 
-1. Fundamentals, Preprocessing & Tokenization
-Tokenization_nlp.ipynb / String_Tokenization_NLP.ipynb: Breaking text into sub-word, word, and character tokens.
+</div>
 
-Lemmatization_&_Stemming.ipynb: Morphological normalization techniques to reduce words to their base roots.
+---
 
-Regular_Expression.ipynb: Pattern matching, cleaning, and regex-based text extraction.
+## 📌 Repository Architecture
 
-Annotattor_NLP.ipynb: Text annotation and labeling workflows.
-
-NLTK_&_Spacy.ipynb: Comparative pipelines utilizing industry-standard NLP libraries (nltk and spaCy).
-
-TextBlob.ipynb: Quick exploratory data analysis, sentiment analysis, and basic parsing.
-
-Word_NLP.ipynb: Foundational word-level lexical analysis.
-
-2. Classical Vectorization & Distributed Representations
-Frequency.ipynb: Frequency-based representations including Bag-of-Words (BoW) and Term Frequency-Inverse Document Frequency (TF-IDF).
-
-Co_Occurrence_Vectors.ipynb: Building and analyzing word co-occurrence matrices for semantic context.
-
-Word_Embedding.ipynb: Introduction to dense vector spaces.
-
-Word2Vec.ipynb: Training and utilizing continuous distributed word representations (Skip-Gram and CBOW architectures).
-
-Doc2Vec.ipynb: Paragraph and document-level embeddings.
-
-Sentence_Embedding.ipynb: Sentence-level semantic vector extraction.
-
-3. Sequential Deep Learning Architectures
-NLP_Network.ipynb: Custom neural network layers tailored for text classification.
-
-RNN.ipynb: Vanilla Recurrent Neural Networks for sequence modeling.
-
-LSTM.ipynb: Long Short-Term Memory networks designed to mitigate vanishing gradients.
-
-GRU.ipynb: Gated Recurrent Units for efficient sequential learning.
-
-Encoder_&_Decoder.ipynb: Architecture blueprint for sequence-to-sequence translation and generation.
-
-Sequence_to_Sequence.ipynb: Full seq-to-seq modeling implementation.
-
-4. Advanced Attention Mechanisms & Transformers
-Attention_mechanism_NLP.ipynb: Implementation of soft/additive attention mechanisms for sequence decoding.
-
-Self_attnetion.ipynb: Scaled Dot-Product Self-Attention mechanics capturing intra-sequence dependencies.
-
-Transformer.ipynb: End-to-end implementation of the Transformer block (Multi-Head Attention, Positional Encoding, and Feed-Forward networks).
-
-Stanford_(Stanza).ipynb: Utilizing Stanford's Stanza toolkit for deep linguistic analysis and dependency parsing.
-
-🛠️ Tech Stack & Dependencies
-The notebooks are implemented in Python using standard data science and deep learning frameworks:
-
-Core & Math: NumPy, Pandas
-
-NLP Libraries: NLTK, spaCy, TextBlob, Stanza
-
-Deep Learning: PyTorch / TensorFlow (depending on notebook configuration)
-
-Environment: Jupyter Notebook / JupyterLab
+```text
+NLP-Repository/
+│
+├── 📁 01_Text_Preprocessing & Pre-processing Utilities
+│   ├── 📜 Tokenization.ipynb                   # Basic Tokenization Techniques
+│   ├── 📜 String_Tokenization_NLP.ipynb         # String-level Tokenization Mechanics
+│   ├── 📜 Lemmatization_&_Stemming.ipynb       # Stemming & Lemmatization Algorithms
+│   ├── 📜 Regular_Expression.ipynb             # Regex Patterns for Text Normalization
+│   └── 📜 Annotator_NLP.ipynb                  # Text Annotation Tools & Utilities
+│
+├── 📁 02_Text_Representation & Embeddings
+│   ├── 📜 Frequency.ipynb                      # Bag-of-Words & TF-IDF Vectors
+│   ├── 📜 Co_Occurence_Vectors.ipynb           # Co-occurrence Matrix Building
+│   ├── 📜 Word_Embedding.ipynb                 # Foundational Word Vectors
+│   ├── 📜 Word2Vec.ipynb                       # Continuous Bag-of-Words (CBOW) & Skip-gram
+│   ├── 📜 Doc2Vec.ipynb                        # Paragraph & Document Level Embeddings
+│   └── 📜 Sentence_Embedding.ipynb             # Sentence-level Vector Representations
+│
+├── 📁 03_NLP_Libraries & Framework Integration
+│   ├── 📜 NLTK_&_Spacy.ipynb                   # Text Pipelines using NLTK and spaCy
+│   ├── 📜 Stanford_(Stanza).ipynb               # Linguistic Analysis with Stanford Stanza
+│   └── 📜 TextBlob.ipynb                       # Sentiment Analysis & Phrasal Processing
+│
+├── 📁 04_Recurrent Architecture & Sequence Models
+│   ├── 📜 RNN.ipynb                            # Recurrent Neural Network Foundations
+│   ├── 📜 LSTM.ipynb                           # Long Short-Term Memory Architectures
+│   ├── 📜 GRU.ipynb                            # Gated Recurrent Unit Networks
+│   └── 📜 Sequence_to_Sequence.ipynb           # Seq2Seq Architecture for Translation/Summarization
+│
+├── 📁 05_Attention & Modern Transformer Architectures
+│   ├── 📜 Attention_mechanism_NLP.ipynb         # Sequence Attention Mechanisms
+│   ├── 📜 Encoder_&_Decoder.ipynb              # Encoder-Decoder Frameworks
+│   ├── 📜 Self_attnetion.ipynb                 # Scaled Dot-Product & Multi-Head Self-Attention
+│   ├── 📜 Transformer.ipynb                    # Full Transformer Architecture Implementation
+│   └── 📜 NLP_Network.ipynb                    # End-to-End Deep Learning NLP Networks
+│
+└── 📜 LICENSE                                   # MIT Open-Source License
